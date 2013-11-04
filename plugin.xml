@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.infobip.mpay"
+        version="0.1.0">
+    <name>Centili MPay</name>
+    <description>Centili Mobile Payments Plugin</description>
+    <license>MIT</license>
+    <keywords>centili, mpay, infobip</keywords>
+
+
+    <js-module src="www/centili.js" name="Centili">
+        <clobbers target="centili" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Centili">
+                <param name="android-package" value="com.infobip.mpay.Centili"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Centili.java" target-dir="src/com/infobip/mpay" />      
+
+        <lib-file src="src/android/CentiliLib-2.jar" />
+
+        <config-file target="AndroidManifest.xml" parent="/*">            
+            <uses-permission android:name="android.permission.INTERNET"/> 
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+            <uses-permission android:name="android.permission.SEND_SMS"/> 
+            <uses-permission android:name="android.permission.READ_SMS"/> 
+            <uses-permission android:name="android.permission.WRITE_SMS"/> 
+            <uses-permission android:name="android.permission.RECIEVE_SMS"/>
+            <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/> 
+            <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">            
+            <activity android:name="c.mpayments.android.BillingActivity"
+                      android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" 
+                      android:configChanges="keyboard|keyboardHidden|orientation">
+                <intent-filter>
+                </intent-filter>
+            </activity>
+        </config-file>
+    </platform>          
+</plugin>
