@@ -12,7 +12,7 @@ To install plugin to your Cordova project use Cordova CLI Tool:
 Basic Usage
 -----------
 
-Invok payment action calling `startPayment` function:
+Invoke payment action calling `startPayment` function:
 
 	centili.startPayment(args, success, error);
 
@@ -69,7 +69,7 @@ For more information about `args` fields check [this](https://www.centili.com/ma
 	purchaseResponse.itemName;
 	purchaseResponse.transactionId;
 
-If `purchaseResponse` has status `error` than contains next fields:
+If `purchaseResponse` has status `error` than it contains the following fields:
 
 	purchaseResponse.status;
 	purchaseResponse.message;
@@ -94,5 +94,5 @@ To disable Pending Transaction Handling set `setPandingTransactionHandlingEnable
 Examples
 --------
 
-Example of Hello World project with Centili Plugin, you could find [here](https://github.com/)
+The example of Hello World project with Centili Plugin can be found [here](https://github.com/)
 
