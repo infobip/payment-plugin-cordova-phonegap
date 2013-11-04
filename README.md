@@ -29,6 +29,8 @@ Invok payment action calling `startPayment` function:
         "testMode": false				// optional (default: false)
     }
 
+For more information about `args` fields check [this](https://www.centili.com/manual/android/android-instructions.pdf)
+
 `success` and `error` are callback functions that need to catch eventActions from Centili Plugin
 
 	
