@@ -2,7 +2,7 @@ Centili InApp Payments Plugin
 =============================
 *only for Android apps*
 
-Installation 
+Installation
 ------------
 
 To install plugin to your Cordova project use Cordova CLI Tool:
