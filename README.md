@@ -9,8 +9,8 @@ To install plugin to your Cordova project use Cordova CLI Tool:
     
     $ cordova plugin add <github repo>
 
-Usage
------
+Basic Usage
+-----------
 
 Invok payment action calling `startPayment` function:
 
@@ -20,11 +20,70 @@ Invok payment action calling `startPayment` function:
 
 	var args = {
         "apiKey": "<YOUR-API-KEY>", 	//mandatory 
-        "clientId": "<CLIENT-ID>",	// optional
+        "clientId": "<CLIENT-ID>",		// optional
         "info": "Some info text...",	// optional
-        "languageCode": "EN",		// optional
-        "packageIndex": 0,		// optional
-        "price": 0,			// optional
-        "offline": false,		// optional (default: false)
-        "testMode": false		// optional (default: false)
+        "languageCode": "EN",			// optional
+        "packageIndex": 0,				// optional
+        "price": 0,						// optional
+        "offline": false,				// optional (default: false)
+        "testMode": false				// optional (default: false)
     }
+
+`success` and `error` are callback functions that need to catch eventActions from Centili Plugin
+
+	
+    var success = function(purchaseResponse) {
+        if (purchaseResponse.status == "onPurchaseSuccess") {
+            //TODO: payment success
+        }
+		if (purchaseResponse.status == "error") {
+			//TODO: error occurs 
+        }
+    };
+
+
+    var error = function(purchaseResponse) {
+        if (purchaseResponse.status == "onPurchaseFailed") {
+            //TODO: payment faild
+        }
+        if (purchaseResponse.status == "onPurchaseCanceled") {
+            //TODO: payment canceled            
+        }
+		if (purchaseResponse.status == "error") {
+            //TODO: error occurs 
+        }
+    };
+
+`purchaseResponse` has next fields:
+	
+	purchaseResponse.status;
+	purchaseResponse.interval;
+	purchaseResponse.itemAmount;
+	purchaseResponse.price;
+	purchaseResponse.apiKey;
+	purchaseResponse.clientId;
+	purchaseResponse.currency;
+	purchaseResponse.errorMessage;
+	purchaseResponse.itemName;
+	purchaseResponse.transactionId;
+
+if `purchaseResponse` has status `error` than contains next fields:
+
+	purchaseResponse.status;
+	purchaseResponse.message;
+	purchaseResponse.stackTrace;
+	
+	
+
+Use Advance Features
+--------------------
+
+To enable debug mode in Android plugin set `setDebugModeEnabled` to true:
+
+	centili.setDebugModeEnabled(true, success, error);
+
+To disable Pending Transaction Handling set `setPandingTransactionHandlingEnabled` to false:
+	
+	centili.setPandingTransactionHandlingEnabled(false, success, error);
+		
+`success` and `error` are callback functions.	
