@@ -91,6 +91,12 @@ To disable Pending Transaction Handling set `setPandingTransactionHandlingEnable
 `success` and `error` are callback functions.	
 
 
+Offline mode
+------------
+
+If offline mode is set to true, it is necessary to replace `libs/CentiliLib-2.jar` with library downloaded from [Centili Partner Panel](https://www.centili.com/partners) for a specific service, in your Android project.
+
+
 Examples
 --------
 
