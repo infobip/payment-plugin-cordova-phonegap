@@ -69,7 +69,7 @@ For more information about `args` fields check [this](https://www.centili.com/ma
 	purchaseResponse.itemName;
 	purchaseResponse.transactionId;
 
-if `purchaseResponse` has status `error` than contains next fields:
+If `purchaseResponse` has status `error` than contains next fields:
 
 	purchaseResponse.status;
 	purchaseResponse.message;
@@ -89,3 +89,10 @@ To disable Pending Transaction Handling set `setPandingTransactionHandlingEnable
 	centili.setPandingTransactionHandlingEnabled(false, success, error);
 		
 `success` and `error` are callback functions.	
+
+
+Examples
+--------
+
+Example of Hello World project with Centili Plugin, you could find [here](https://github.com/)
+
