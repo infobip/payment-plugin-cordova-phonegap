@@ -7,7 +7,7 @@ Installation
 
 To install plugin to your Cordova project use Cordova CLI Tool:
     
-    $ cordova plugin add <github repo>
+    $ cordova plugin add com.infobip.mpay
 
 Basic Usage
 -----------
@@ -107,4 +107,3 @@ Owners
 ------
 
 Framework Integration Team
-
