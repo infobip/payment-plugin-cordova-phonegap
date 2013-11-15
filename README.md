@@ -38,8 +38,9 @@ For more information about `args` fields check [this](https://www.centili.com/ma
         if (purchaseResponse.status == "onPurchaseSuccess") {
             //TODO: payment success
         }
-		if (purchaseResponse.status == "error") {
-			//TODO: error occurs 
+		if (purchaseResponse.status == "onPurchasePending") {
+            //TODO: payment pending
+            //avoid blocking calls like alert(); 
         }
     };
 
