@@ -1,5 +1,15 @@
 var centili = {
     startPayment: function(args, successCallback, errorCallback) {
+        if (typeof errorCallback != "function")  {
+            console.log("CentiliPayment failure: failure parameter not a function");
+            return
+        }
+
+        if (typeof successCallback != "function") {
+            console.log("CentiliPayment failure: success callback parameter must be a function");
+            return
+        }
+
         cordova.exec(
             successCallback,    // success callback function
             errorCallback,      // error callback function
@@ -9,6 +19,15 @@ var centili = {
         ); 
     },
     setDebugModeEnabled: function(ind, successCallback, errorCallback){
+        if (typeof errorCallback != "function")  {
+            console.log("CentiliPayment failure: failure parameter not a function");
+            return
+        }
+
+        if (typeof successCallback != "function") {
+            console.log("CentiliPayment failure: success callback parameter must be a function");
+            return
+        }
         cordova.exec(
             successCallback,    
             errorCallback,      
@@ -20,6 +39,16 @@ var centili = {
         ); 
     },
     setPandingTransactionHandlingEnabled: function(ind, successCallback, errorCallback){
+        if (typeof errorCallback != "function")  {
+            console.log("CentiliPayment failure: failure parameter not a function");
+            return
+        }
+
+        if (typeof successCallback != "function") {
+            console.log("CentiliPayment failure: success callback parameter must be a function");
+            return
+        }        
+
         cordova.exec(
             successCallback,    
             errorCallback,      
