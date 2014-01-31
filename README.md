@@ -1,6 +1,6 @@
 Centili InApp Payments Plugin
 =============================
-*only for Android apps*
+*Only for Android platform*
 
 Installation
 ------------
@@ -19,7 +19,7 @@ Invoke payment action calling `startPayment` function:
 `args` is JSONObject that contains next variables:
 
 	var args = {
-        "apiKey": "<YOUR-API-KEY>", 	//mandatory 
+        "apiKey": "<YOUR-API-KEY>", 	// mandatory 
         "clientId": "<CLIENT-ID>",		// optional
         "info": "Some info text...",	// optional
         "languageCode": "EN",			// optional
@@ -101,10 +101,9 @@ If offline mode is set to true, it is necessary to replace `libs/CentiliLib-2.ja
 Examples
 --------
 
-The example of Hello World project with Centili Plugin can be found [here](https://github.com/)
-
+The example of Hello World project with Centili Plugin can be found [here](https://github.com/infobip/). To be done soon.
 
 Owners
 ------
 
-Framework Integration Team
+Framework Integration Team @ Infobip Ltd.
