@@ -1,22 +1,22 @@
-Centili InApp Payments Plugin
+Centili in-app Payment Plugin for Cordova/PhoneGap 
 =============================
-*Only for Android platform*
+*only for Android platform*
 
 Installation
 ------------
 
-To install plugin to your Cordova project use Cordova CLI Tool:
+To install the plugin to your Cordova project use the Cordova CLI Tool:
     
     $ cordova plugin add com.infobip.mpay
 
-Basic Usage
+Basic usage
 -----------
 
-Invoke payment action calling `startPayment` function:
+Invoke the payment action by calling `startPayment` function:
 
 	centili.startPayment(args, success, error);
 
-`args` is JSONObject that contains next variables:
+`args` is a JSONObject that contains the following variables:
 
 	var args = {
         "apiKey": "<YOUR-API-KEY>", 	// mandatory 
@@ -31,7 +31,7 @@ Invoke payment action calling `startPayment` function:
 
 For more information about `args` fields check [this](https://www.centili.com/manual/android/android-instructions.pdf)
 
-`success` and `error` are callback functions that need to catch eventActions from Centili Plugin
+`success` and `error` are call-back functions that need to catch eventActions from the Centili Plugin
 
 	
     var success = function(purchaseResponse) {
@@ -57,7 +57,7 @@ For more information about `args` fields check [this](https://www.centili.com/ma
         }
     };
 
-`purchaseResponse` has next fields:
+`purchaseResponse` has the following fields:
 	
 	purchaseResponse.status;
 	purchaseResponse.interval;
@@ -78,7 +78,7 @@ If `purchaseResponse` has status `error` than it contains the following fields:
 	
 	
 
-Use Advance Features
+Advanced features usage
 --------------------
 
 To enable debug mode in Android plugin set `setDebugModeEnabled` to true:
@@ -89,19 +89,19 @@ To disable Pending Transaction Handling set `setPandingTransactionHandlingEnable
 	
 	centili.setPandingTransactionHandlingEnabled(false, success, error);
 		
-`success` and `error` are callback functions.	
+`success` and `error` are call-back functions.	
 
 
 Offline mode
 ------------
 
-If offline mode is set to true, it is necessary to replace `libs/CentiliLib-2.jar` with library downloaded from [Centili Partner Panel](https://www.centili.com/partners) for a specific service, in your Android project.
+If offline mode is set to true, it is necessary to replace `libs/CentiliLib-2.jar` with a library downloaded from [Centili Partner Panel](https://www.centili.com/partners) for the specific service - in your Android project.
 
 
 Examples
 --------
 
-The example of Hello World project with Centili Plugin can be found [here](https://github.com/infobip/). To be done soon.
+The example of the 'Hello World' project with the Centili Plugin can be found [here](https://github.com/infobip/). To be done soon.
 
 Owners
 ------
