@@ -101,7 +101,7 @@ If offline mode is set to true, it is necessary to replace `libs/CentiliLib-2.ja
 Examples
 --------
 
-The example of the 'Hello World' project with the Centili Plugin can be found [here](https://github.com/infobip/). To be done soon.
+The example of the 'Hello World' project with the Centili Plugin can be found [here](https://github.com/infobip/payment-plugin-cordova-phonegap).
 
 Owners
 ------
